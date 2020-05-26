@@ -10,6 +10,18 @@ The point of this repo is to show how Django handles templates when you have a s
 
 - Django will always grab the first template that it finds with the right name. If you have three apps that all use `index.html`, `return render(request, "index.html")` will always return the first `index.html` it finds in _any template folder_. This requires that each template have a different name.
 
+## Running
+
+```shell script
+poetry install
+poetry shell
+
+python manage.py collectstatic
+> yes
+
+python manage.py runserver
+```
+
 This is part of a set of repos.
 
 - https://github.com/itsthejoker/templatedemo-sharedfolder
